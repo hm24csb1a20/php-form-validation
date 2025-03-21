@@ -3,103 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Visa Requirement & Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+        }
+        select, input, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <div class="wrapper">
-		<h1>Registration Form</h1>
-		<form method="POST" action="processor.php">
-			<div class="form-element no-m-top">	
-				Email:
-				<input id="email" type="text" name="email" placeholder="Enter your Email">
-			</div>
-			<div class="form-element">
-				Password:
-				<input id="email" type="password" name="pass" placeholder="Password">
-			</div>
-			<div class="form-element">
-				First Name:
-				<input id="email" name="first" placeholder="First Name">
-			</div>
-			<div class="form-element">
-				Last Name:
-				<input id="email" name="last" placeholder="Last Name" clear>
-			</div>
-			<div class="form-element">
-				<div class="gender-m">Gender:</div>
-				<div class="gender">
-					Male
-					<input type="radio" name="Gender" value="M" id="M">
-				</div>
-				
-				<div class="gender">
-					Female
-					<input type="radio" name="Gender" value="F" id="F">
-				</div> 
-				<div class="gender">
-					Other
-					<input type="radio" name="Gender" value="O" id="O">
-				</div>
-			</div>
-			<div class="form-element">
-				Area:
-				<select name="choice">
-					<option value="web">Web Programming</option>	
-					<option value="DSA">DSA</option>
-					<option value="MF">MFCS</option>
-					<option value="bee">BEE</option>
-				</select>
-					
-			</div>
-			<div class="form-element">
-				Phone Number:
-				<input id="tel" type="number" name="number" placeholder="Phone Number" clear>
-			</div>
-			<div class="form-element">
-				<div>Date Of Birth:</div>
-				<input id="dob" type="date" name="dob" placeholder="Phone Number" clear>
-			</div>
-			<div class="form-element">
-				<div>Address:</div>
-				<input id="dob" type="text" name="addy" placeholder="Address" clear>
-			</div>
-			<div class="form-element">
-				<div id="favTit">Favorites:</div>
-				<div class="fav">
-					DSA 
-					<input type="checkbox" name="favs[]" value="DSA" id="M">
-				</div>
-				<div class="fav">
-					DL
-					<input type="checkbox" name="favs[]" value="DL" id="F">
-				</div> 
-				<div class="fav">
-					ML
-					<input type="checkbox" name="favs[]" value="ML" id="O">
-				</div>
-				<div class="fav">
-					CPP
-					<input type="checkbox" name="favs[]" value="CPP" id="P">
-				</div>
-			</div>
-			
+    <div class="container">
+        <h2>Visa Requirement & Application</h2>
+        <form action="https://httpbin.org/post" method="post">
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" required>
 
-			<div class="form-element buttons">
-				<button type="reset">
-					Reset					
-				</button>
-				
-				<button type="submit">
-					Submit
-				</button>
-			</div>
+            <label for="passport">Passport Number:</label>
+            <input type="text" id="passport" name="passport" minlength="8" maxlength="10" required>
 
-			
-			<marquee width="100%" direction="left" class="m-top">
-				Fill in your details and register now! Make sure the details you enter are accurate.
-			</marquee>
-			
-		</form>
-		</div>
+            <label for="country">Select Country:</label>
+            <select name="country" id="country" required>
+                <option value="">-- Select --</option>
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+                <option value="India">India</option>
+                <option value="UK">UK</option>
+                <option value="Australia">Australia</option>
+            </select>
+
+            <button type="submit">Check & Apply for Visa</button>
+        </form>
+    </div>
 </body>
 </html>
