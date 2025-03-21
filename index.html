@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+		<h1>Registration Form</h1>
+		<form method="POST" action="processor.php">
+			<div class="form-element no-m-top">	
+				Email:
+				<input id="email" type="text" name="email" placeholder="Enter your Email">
+			</div>
+			<div class="form-element">
+				Password:
+				<input id="email" type="password" name="pass" placeholder="Password">
+			</div>
+			<div class="form-element">
+				First Name:
+				<input id="email" name="first" placeholder="First Name">
+			</div>
+			<div class="form-element">
+				Last Name:
+				<input id="email" name="last" placeholder="Last Name" clear>
+			</div>
+			<div class="form-element">
+				<div class="gender-m">Gender:</div>
+				<div class="gender">
+					Male
+					<input type="radio" name="Gender" value="M" id="M">
+				</div>
+				
+				<div class="gender">
+					Female
+					<input type="radio" name="Gender" value="F" id="F">
+				</div> 
+				<div class="gender">
+					Other
+					<input type="radio" name="Gender" value="O" id="O">
+				</div>
+			</div>
+			<div class="form-element">
+				Area:
+				<select name="choice">
+					<option value="web">Web Programming</option>	
+					<option value="DSA">DSA</option>
+					<option value="MF">MFCS</option>
+					<option value="bee">BEE</option>
+				</select>
+					
+			</div>
+			<div class="form-element">
+				Phone Number:
+				<input id="tel" type="number" name="number" placeholder="Phone Number" clear>
+			</div>
+			<div class="form-element">
+				<div>Date Of Birth:</div>
+				<input id="dob" type="date" name="dob" placeholder="Phone Number" clear>
+			</div>
+			<div class="form-element">
+				<div>Address:</div>
+				<input id="dob" type="text" name="addy" placeholder="Address" clear>
+			</div>
+			<div class="form-element">
+				<div id="favTit">Favorites:</div>
+				<div class="fav">
+					DSA 
+					<input type="checkbox" name="favs[]" value="DSA" id="M">
+				</div>
+				<div class="fav">
+					DL
+					<input type="checkbox" name="favs[]" value="DL" id="F">
+				</div> 
+				<div class="fav">
+					ML
+					<input type="checkbox" name="favs[]" value="ML" id="O">
+				</div>
+				<div class="fav">
+					CPP
+					<input type="checkbox" name="favs[]" value="CPP" id="P">
+				</div>
+			</div>
+			
+
+			<div class="form-element buttons">
+				<button type="reset">
+					Reset					
+				</button>
+				
+				<button type="submit">
+					Submit
+				</button>
+			</div>
+
+			
+			<marquee width="100%" direction="left" class="m-top">
+				Fill in your details and register now! Make sure the details you enter are accurate.
+			</marquee>
+			
+		</form>
+		</div>
+</body>
+</html>
